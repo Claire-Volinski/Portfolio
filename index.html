@@ -15,6 +15,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#work">Work</a></li>
+        <li><a href="#joke">Joke</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -28,16 +29,16 @@
           <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
             <defs>
               <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0" stop-color="#7b61ff"/>
-                <stop offset="1" stop-color="#00d4ff"/>
+                <stop offset="0" stop-color="#8AA76F"/>
+                <stop offset="1" stop-color="#8B5E3C"/>
               </linearGradient>
             </defs>
-            <rect width="120" height="120" rx="20" fill="#f6f8ff"/>
+            <rect width="120" height="120" rx="20" fill="#FBFBF7"/>
             <g transform="translate(20,20)">
               <circle cx="40" cy="28" r="22" fill="url(#g)" opacity="0.95"></circle>
-              <circle cx="34" cy="24" r="6" fill="#fff" opacity="0.9"></circle>
-              <circle cx="46" cy="24" r="6" fill="#fff" opacity="0.9"></circle>
-              <rect x="26" y="40" width="28" height="12" rx="6" fill="#ffe5f0" opacity="0.9"></rect>
+              <circle cx="34" cy="24" r="6" fill="#fff" opacity="0.95"></circle>
+              <circle cx="46" cy="24" r="6" fill="#fff" opacity="0.95"></circle>
+              <rect x="26" y="40" width="28" height="12" rx="6" fill="#F3EDE6" opacity="0.95"></rect>
             </g>
           </svg>
         </div>
@@ -92,6 +93,20 @@
           <p>Led front-end build and animations for a conversion-focused landing experience with performance budget in mind.</p>
           <p class="project-meta">Next.js • Lighthouse</p>
         </article>
+      </div>
+    </section>
+
+    <section id="joke" class="section card">
+      <h2>Joke Break</h2>
+      <p>Need a tiny pause? Click below for a random (family-friendly) joke pulled from the web. If the API is unavailable, a local fallback joke will appear.</p>
+
+      <div class="joke-card" aria-live="polite">
+        <p class="joke-text" id="joke-text">Ready for a joke?</p>
+        <div class="joke-actions">
+          <button id="joke-btn" class="btn joke-btn">Tell me a joke</button>
+          <button id="copy-joke" class="btn ghost" title="Copy joke to clipboard">Copy</button>
+        </div>
+        <p class="joke-source" id="joke-source" aria-hidden="true">Source: icanhazdadjoke</p>
       </div>
     </section>
 
