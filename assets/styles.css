@@ -1,4 +1,4 @@
-/* styles.css — cozy sage, white, brown palette */
+/* styles.css — cozy sage, white, brown palette (updated inputs & buttons; larger avatar) */
 :root{
   --bg:#F6F5F0; /* warm off-white */
   --card:#FFFFFF; /* card backgrounds */
@@ -31,12 +31,15 @@ body{
 
 .hero{position:relative;padding:48px 18px 64px;overflow:hidden}
 .hero-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:32px;align-items:center}
-.avatar{width:140px;height:140px;flex:0 0 140px;border-radius:18px;box-shadow:0 8px 24px rgba(139,94,60,0.08);overflow:hidden}
+.avatar{width:180px;height:180px;flex:0 0 180px;border-radius:18px;box-shadow:0 8px 24px rgba(139,94,60,0.08);overflow:hidden}
 .hero-copy h1{margin:0;font-size:2.1rem}
 .tagline{color:var(--muted);margin-top:8px}
-.cta-row{margin-top:18px}
+.cta-row{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+
+/* Primary button: bold sage gradient */
 .btn{display:inline-block;padding:10px 14px;background:linear-gradient(90deg,var(--accent1),var(--accent2));border-radius:10px;color:#fff;text-decoration:none;font-weight:700;border:none}
-.btn.ghost{background:transparent;border:1px solid rgba(43,43,36,0.08);color:var(--muted);padding:9px 12px;margin-left:8px}
+/* Ghost buttons use warm brown for emphasis */
+.btn.ghost{background:transparent;border:1px solid rgba(139,94,60,0.12);color:var(--accent-brown);padding:9px 12px}
 
 .hero-accent{position:absolute;right:-8%;top:-6%;width:40vmax;height:40vmax;background:radial-gradient(circle at 20% 20%, rgba(138,167,111,0.12), transparent 25%), radial-gradient(circle at 80% 80%, rgba(139,94,60,0.06), transparent 20%);filter:blur(36px);transform:rotate(7deg)}
 
@@ -53,7 +56,8 @@ body{
 
 .contact-form{display:grid;gap:10px;margin-top:12px}
 .contact-form label{display:block;color:var(--muted);font-weight:600}
-.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(43,43,36,0.06);background:transparent;color:var(--text)}
+/* Inputs: subtle sage-tinted background with gentle border */
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(85,122,74,0.08);background:rgba(138,167,111,0.03);color:var(--text)}
 .form-actions{display:flex;gap:10px;align-items:center}
 
 .site-footer{padding:22px 18px;margin-top:34px}
@@ -61,7 +65,7 @@ body{
 
 @media (max-width:700px){
   .hero-inner{flex-direction:column;align-items:flex-start}
-  .avatar{width:110px;height:110px}
+  .avatar{width:140px;height:140px}
   .nav-links{display:none}
 }
 
@@ -69,11 +73,4 @@ body{
 .project:hover{transform:translateY(-6px);transition:transform .22s ease;box-shadow:0 12px 30px rgba(88,75,60,0.06)}
 .btn{transition:transform .18s ease}
 .btn:active{transform:translateY(1px)}
-
-/* Joke section styles */
-.joke-card{margin-top:14px;padding:14px;background:linear-gradient(180deg, rgba(43,43,36,0.01), rgba(43,43,36,0.005));border-radius:12px;display:flex;flex-direction:column;gap:10px}
-.joke-text{font-size:1.05rem;margin:0;color:#264033}
-.joke-actions{display:flex;gap:8px;align-items:center}
-.joke-btn{padding:8px 12px;font-weight:800}
-.joke-source{font-size:0.85rem;color:var(--muted);margin:0}
 

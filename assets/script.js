@@ -1,9 +1,11 @@
 // Minimal JS: update year and add a tiny animation hook
+// Joke section removed — this file now only handles site runtime touches
+
 document.addEventListener('DOMContentLoaded', function(){
   const y = document.getElementById('year');
   if(y) y.textContent = new Date().getFullYear();
 
-  // reduce motion respect
+  // respect reduced motion preference
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(!prefersReduced){
     // subtle floating on the avatar accent
