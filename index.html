@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Claire Volinski — Portfolio</title>
-  <meta name="description" content="Claire Volinski — Developer, Designer, Problem-solver. A tidy, fun professional profile.">
+  <meta name="description" content="Claire Volinski — Developer, Designer, Problem-solver. Modern portfolio with focused sections.">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -15,117 +15,151 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#work">Work</a></li>
+        <li><a href="#fyre">FYRE-Assignments</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="avatar" aria-hidden="true">
-          <!-- Fun SVG avatar; replace with your photo if you like -->
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
-            <defs>
-              <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0" stop-color="#8AA76F"/>
-                <stop offset="1" stop-color="#8B5E3C"/>
-              </linearGradient>
-            </defs>
-            <rect width="120" height="120" rx="20" fill="#FBFBF7"/>
-            <g transform="translate(20,20)">
-              <circle cx="40" cy="28" r="22" fill="url(#g)" opacity="0.95"></circle>
-              <circle cx="34" cy="24" r="6" fill="#fff" opacity="0.95"></circle>
-              <circle cx="46" cy="24" r="6" fill="#fff" opacity="0.95"></circle>
-              <rect x="26" y="40" width="28" height="12" rx="6" fill="#F3EDE6" opacity="0.95"></rect>
-            </g>
-          </svg>
+    <!-- Hero: split, bold blocks, sharp geometry -->
+    <section class="hero-hero">
+      <div class="hero-left">
+        <div class="avatar-block">
+          <div class="avatar-inner" aria-hidden="true">
+            <!-- keep the SVG as an accent behind a potential photo -->
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
+              <defs>
+                <linearGradient id="g2" x1="0" x2="1">
+                  <stop offset="0" stop-color="#8AA76F"/>
+                  <stop offset="1" stop-color="#8B5E3C"/>
+                </linearGradient>
+              </defs>
+              <rect width="120" height="120" fill="#FBFBF7"/>
+              <g transform="translate(20,18)">
+                <rect x="6" y="6" width="68" height="68" rx="6" fill="url(#g2)"/>
+                <circle cx="36" cy="24" r="6" fill="#fff" opacity="0.95"></circle>
+                <rect x="20" y="46" width="32" height="10" rx="3" fill="#F3EDE6" opacity="0.95"></rect>
+              </g>
+            </svg>
+          </div>
         </div>
+      </div>
 
-        <div class="hero-copy">
-          <h1>Hi, I’m Claire.</h1>
-          <p class="tagline">I build clean, delightful web experiences — a blend of solid engineering and thoughtful design.</p>
-          <p class="cta-row">
-            <a class="btn" href="#work">See my work</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/claire-volinski" target="_blank" rel="noopener" aria-label="Claire Volinski on LinkedIn">View my LinkedIn</a>
-            <a class="btn ghost" href="mailto:claire@example.com">Email me</a>
+      <div class="hero-right">
+        <h1 class="hero-title">Hi, I’m Claire.</h1>
+        <p class="hero-sub">I design and build thoughtful, reliable web products — focused on accessibility, performance, and clarity.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn outline" href="https://www.linkedin.com/in/claire-volinski" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn outline" href="mailto:claire@example.com">Email</a>
+        </div>
+        <div class="hero-meta-blocks">
+          <div class="meta meta-left">
+            <strong>Experience</strong>
+            <span>Front-end &amp; Design Systems</span>
+          </div>
+          <div class="meta meta-right">
+            <strong>Location</strong>
+            <span>Remote-friendly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections use blocky layout with sharp edges and colored gutters -->
+    <section id="about" class="block section-block">
+      <div class="block-gutter"></div>
+      <div class="block-content card">
+        <h2>About</h2>
+        <p>I’m a front-end-focused developer with experience in modern JavaScript frameworks, accessible UI, and thoughtful interaction design. I turn complex problems into calm, usable interfaces and ship code teams trust.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="block section-block">
+      <div class="block-gutter"></div>
+      <div class="block-content">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">JavaScript / TypeScript</div>
+          <div class="skill">React / Next.js</div>
+          <div class="skill">HTML &amp; CSS (Sass)</div>
+          <div class="skill">Accessibility (WCAG)</div>
+          <div class="skill">Design systems</div>
+          <div class="skill">Node.js / APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="block section-block card">
+      <div class="block-gutter"></div>
+      <div class="block-content">
+        <h2>Selected Work</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>Project Alpha</h3>
+            <p>A responsive dashboard for tracking product metrics. Focus: performance, accessibility, and delightful micro-interactions.</p>
+            <p class="project-meta">React • TypeScript • D3</p>
+          </article>
+
+          <article class="project">
+            <h3>Design System Kit</h3>
+            <p>Reusable component library and tokens to help teams move faster with consistent UI and accessible patterns.</p>
+            <p class="project-meta">Storybook • CSS Modules</p>
+          </article>
+
+          <article class="project">
+            <h3>Marketing Site Refresh</h3>
+            <p>Led front-end build and animations for a conversion-focused landing experience with a strict performance budget.</p>
+            <p class="project-meta">Next.js • Lighthouse</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FYRE Assignments section linking into portfolio (placeholder URL) -->
+    <section id="fyre" class="block section-block fyre-block">
+      <div class="block-gutter"></div>
+      <div class="block-content card">
+        <h2>FYRE-Assignments</h2>
+        <p>This is a curated collection of assignments and exercises I completed for the FYRE program. Click through to view the full assignment set on my portfolio site.</p>
+        <p><a class="btn primary" href="/fyre-assignments/" title="Open FYRE Assignments">Open FYRE-Assignments</a></p>
+      </div>
+    </section>
+
+    <section id="contact" class="block section-block card">
+      <div class="block-gutter"></div>
+      <div class="block-content">
+        <h2>Contact</h2>
+        <p>Interested in collaborating or hiring? I respond quickly to clear messages. Connect on <a href="https://www.linkedin.com/in/claire-volinski" target="_blank" rel="noopener">LinkedIn</a> or send an email.</p>
+        <form class="contact-form" action="mailto:claire@example.com" method="post" enctype="text/plain">
+          <label>
+            Your name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <p class="form-actions">
+            <button type="submit" class="btn primary">Send</button>
+            <a class="btn outline" href="/Claire-Volinski-Resume.pdf">Download resume</a>
           </p>
-        </div>
-      </div>
-      <div class="hero-accent" aria-hidden="true"></div>
-    </section>
-
-    <section id="about" class="section card">
-      <h2>About</h2>
-      <p>I’m a front-end-focused developer with experience in modern JavaScript frameworks, accessible UI, and thoughtful interaction design. I love turning complex problems into calm, usable interfaces and adding a splash of personality where it helps users.</p>
-      <p>I enjoy mentoring, writing clear docs, and shipping quality code that lasts.</p>
-    </section>
-
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <ul class="skills-grid">
-        <li>JavaScript / TypeScript</li>
-        <li>React / Next.js</li>
-        <li>HTML &amp; CSS (Sass, PostCSS)</li>
-        <li>Accessibility (WCAG)</li>
-        <li>Design systems</li>
-        <li>Node.js / APIs</li>
-      </ul>
-    </section>
-
-    <section id="work" class="section card">
-      <h2>Selected Work</h2>
-      <div class="projects">
-        <article class="project">
-          <h3>Project Alpha</h3>
-          <p>A responsive dashboard for tracking product metrics. Focus: performance, accessibility, and delightful micro-interactions.</p>
-          <p class="project-meta">React • TypeScript • D3</p>
-        </article>
-
-        <article class="project">
-          <h3>Design System Kit</h3>
-          <p>Reusable component library and tokens to help teams move faster with consistent UI and accessible patterns.</p>
-          <p class="project-meta">Storybook • CSS Modules</p>
-        </article>
-
-        <article class="project">
-          <h3>Marketing Site Refresh</h3>
-          <p>Led front-end build and animations for a conversion-focused landing experience with performance budget in mind.</p>
-          <p class="project-meta">Next.js • Lighthouse</p>
-        </article>
+        </form>
       </div>
     </section>
 
-    <section id="contact" class="section card">
-      <h2>Contact</h2>
-      <p>Want to work together or have a quick question? I respond quickly to thoughtful messages.</p>
-      <p>Connect with me on <a href="https://www.linkedin.com/in/claire-volinski" target="_blank" rel="noopener">LinkedIn</a>.</p>
-      <form class="contact-form" action="mailto:claire@example.com" method="post" enctype="text/plain">
-        <label>
-          Your name
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <p class="form-actions">
-          <button type="submit" class="btn">Send</button>
-          <a class="btn ghost" href="/Claire-Volinski-Resume.pdf">Download resume</a>
-        </p>
-      </form>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <p>Made with care — Claire Volinski © <span id="year"></span></p>
       <p class="social">
-        <a href="#" aria-label="GitHub">GitHub</a> · <a href="https://www.linkedin.com/in/claire-volinski" target="_blank" rel="noopener" aria-label="Claire Volinski on LinkedIn">LinkedIn</a> · <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="GitHub">GitHub</a> · <a href="https://www.linkedin.com/in/claire-volinski" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </div>
   </footer>

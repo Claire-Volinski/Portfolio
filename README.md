@@ -1,28 +1,18 @@
-# Profile Website
+# Profile Website — Blocky Angular Redesign
 
-This branch adds a clean, responsive, and slightly playful professional profile website for Claire Volinski.
+This commit changes the layout and theming to a block-focused, angular design that uses color gutters and sharp geometry to direct attention across the page. It also adds a "FYRE-Assignments" section that links to `/fyre-assignments/` (placeholder — replace with the real path or external URL if you want).
 
-What's included:
+Files changed on branch `profile-website`:
 
-- index.html — main site
-- assets/styles.css — styling
-- assets/script.js — small interactive touches
+- index.html — reworked layout to blocky hero and section gutters; added FYRE-Assignments section and updated CTAs
+- assets/styles.css — new angular/blocky styles, updated colors, sharper edges, gutters and bold left color block for hero
+- assets/script.js — simplified runtime script
 
-How to preview locally:
-
-- Option 1: Open index.html in your browser (works for simple static preview).
-- Option 2: Serve it locally: `python -m http.server 8000` from the repo root and open http://localhost:8000
-- Option 3: `npx serve` if you prefer a tiny node static server.
+Preview locally:
+- python -m http.server 8000
+- open http://localhost:8000
 
 Next suggestions:
-
-- Replace the placeholder SVG avatar with a photo at `assets/profile.jpg` and update the markup.
-- Add `Claire-Volinski-Resume.pdf` to the repo root if you want the resume download link to work.
-- Create a Pull Request from branch `profile-website` into your default branch and merge when ready.
-- Optionally enable GitHub Pages from this branch to host at `https://Claire-Volinski.github.io/Portfolio/`.
-
-If you'd like, I can:
-- Open a pull request for you.
-- Add a GitHub Actions workflow to build/deploy to GitHub Pages.
-- Replace the SVG with a provided headshot and wire up actual project links.
-
+- Provide the final URL or path for FYRE-Assignments and I will link it directly.
+- If you want a dedicated FYRE-Assignments folder (with index.html), provide content and I will add it.
+- I can open a Pull Request for you and/or enable GitHub Pages deployment.
