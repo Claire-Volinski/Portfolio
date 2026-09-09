@@ -1,4 +1,4 @@
-/* styles.css — blocky, angular layout using the cozy sage/brown palette; sharper geometry */
+/* styles.css — blocky/angular layout using the cozy sage/brown palette; adjusted to match land-book-style centered content and tighter gutters */
 :root{
   --bg:#F6F5F0; /* warm off-white */
   --card:#FFFFFF; /* card backgrounds */
@@ -18,28 +18,29 @@ body{
   font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color:var(--text);
   background:var(--bg);
+  padding:20px; /* keep content away from the browser edge like design galleries */
 }
 
 /* Header */
 .site-header{position:sticky;top:0;background:transparent;backdrop-filter:saturate(110%) blur(4px);z-index:40}
-.nav{max-width:var(--max-width);margin:0 auto;padding:20px 18px;display:flex;align-items:center;justify-content:space-between}
+.nav{max-width:var(--max-width);margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
 .brand{font-weight:800;letter-spacing:0.4px;color:var(--text)}
 .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:18px}
 .nav-links a{color:var(--muted);text-decoration:none;font-weight:700;padding:6px 8px;border-radius:4px}
-.nav-links a:hover{color:var(--accent2);background:transparent}
+.nav-links a:hover{color:var(--accent2)}
 
-/* HERO: split layout with strong left color block */
-.hero-hero{max-width:var(--max-width);margin:36px auto;padding:0;display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:center}
-.hero-left{background:linear-gradient(180deg,var(--accent1),var(--accent2));color:#fff;padding:28px 22px;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0, 100% 0, 88% 100%, 0% 100%);box-shadow:8px 18px 40px rgba(85,122,74,0.08)}
-.avatar-block{width:180px;height:180px;display:flex;align-items:center;justify-content:center}
-.avatar-inner svg{width:120px;height:120px;display:block}
+/* HERO: split layout with strong left color block - narrower and centered like land-book examples */
+.hero-hero{max-width:var(--max-width);margin:36px auto;padding:0;display:grid;grid-template-columns:160px 1fr;gap:28px;align-items:center}
+.hero-left{background:linear-gradient(180deg,var(--accent1),var(--accent2));color:#fff;padding:22px 16px;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0, 100% 0, 92% 100%, 0% 100%);box-shadow:8px 18px 40px rgba(85,122,74,0.08)}
+.avatar-block{width:120px;height:120px;display:flex;align-items:center;justify-content:center}
+.avatar-inner svg{width:96px;height:96px;display:block}
 
-.hero-right{padding:6px 12px}
-.hero-title{margin:0;font-size:2.4rem;letter-spacing:-0.6px}
-.hero-sub{color:var(--muted);margin-top:8px}
+.hero-right{padding-left:8px}
+.hero-title{margin:0;font-size:2.2rem;letter-spacing:-0.4px}
+.hero-sub{color:var(--muted);margin-top:8px;max-width:720px}
 .hero-ctas{margin-top:18px;display:flex;gap:12px}
 
-/* Buttons: sharp, substantial */
+/* Buttons: sharper, substantial, consistent with design gallery aesthetics */
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;font-weight:800;border-radius:6px;text-decoration:none;border:0;cursor:pointer}
 .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff}
 .btn.outline{background:transparent;border:2px solid var(--accent-brown);color:var(--accent-brown)}
@@ -50,11 +51,11 @@ body{
 .meta strong{font-size:0.95rem}
 .meta span{color:var(--muted);font-size:0.92rem;margin-top:6px}
 
-/* Block sections: gutter on left for emphasis */
-.section-block{display:grid;grid-template-columns:74px 1fr;gap:18px;align-items:start;max-width:var(--max-width);margin:20px auto}
-.block-gutter{background:var(--gutter);width:74px;height:100%;border-right:4px solid rgba(139,94,60,0.08);clip-path:polygon(0 0,100% 6%,100% 94%,0 100%)}
+/* Block sections: gutter on left for emphasis, tighter and centered */
+.section-block{display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:start;max-width:var(--max-width);margin:20px auto}
+.block-gutter{background:var(--gutter);width:48px;height:100%;border-right:4px solid rgba(139,94,60,0.08);clip-path:polygon(0 0,100% 6%,100% 94%,0 100%)}
 .block-content{padding:20px 22px}
-.card{background:var(--card);box-shadow:0 10px 30px rgba(43,43,36,0.04)}
+.card{background:var(--card);box-shadow:0 10px 30px rgba(43,43,36,0.04);border-radius:8px}
 
 .section-block h2{margin-top:0;font-size:1.25rem}
 
@@ -82,13 +83,14 @@ body{
 @media (max-width:900px){
   .hero-hero{grid-template-columns:1fr;gap:12px;padding:18px}
   .hero-left{clip-path:none;width:100%;}
-  .section-block{grid-template-columns:48px 1fr;gap:12px}
+  .section-block{grid-template-columns:36px 1fr;gap:12px}
   .skills-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 @media (max-width:520px){
   .skills-grid{grid-template-columns:1fr}
   .nav-links{display:none}
-  .avatar-block{width:140px;height:140px}
+  .avatar-block{width:100px;height:100px}
+  .avatar-inner svg{width:80px;height:80px}
   .hero-title{font-size:1.6rem}
 }
