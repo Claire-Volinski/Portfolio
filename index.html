@@ -113,7 +113,7 @@
     .text-link { color: var(--sage-deep); font-size: 13px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 5px; }
     .hero-art { position: relative; max-width: 480px; justify-self: end; animation: rise-in .8s .12s both; }
     .hero-art::before { position: absolute; z-index: -1; inset: 26px -22px -22px 26px; background: var(--sage); content: ""; }
-    .hero-art img { height: clamp(360px, 44vw, 540px); object-fit: cover; object-position: 50% 50%; }
+    .hero-art img { height: clamp(360px, 44vw, 540px); object-fit: cover; object-position: 50% 27%; }
     .image-note { position: absolute; right: 14px; bottom: 14px; padding: 8px 12px; background: var(--paper); color: var(--sage-deep); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .hero-foot { display: flex; align-items: center; gap: 12px; margin-top: 53px; color: var(--muted); font-size: 12px; }
     .availability { width: 8px; height: 8px; border-radius: 50%; background: #73965c; box-shadow: 0 0 0 4px #73965c22; }
@@ -143,11 +143,17 @@
     .experience .company { margin: 2px 0 8px; color: var(--sage-deep); font-size: 13px; font-weight: 600; }
     .experience p { max-width: 510px; margin: 0; color: var(--muted); font-size: 13px; }
     .experience ul { display: grid; gap: 8px; margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 13px; }
+    .leadership-photo { max-width: 440px; margin: 18px 0 0; }
+    .leadership-photo img { aspect-ratio: 1.38; object-fit: cover; }
+    .leadership-photo figcaption { padding-top: 7px; color: var(--muted); font-size: 11px; }
 
     .interests { padding: 78px 0; background: var(--sage-deep); color: #f4f5ed; }
     .interests-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 70px; }
     .interests .eyebrow { color: var(--lime); }
     .interests h2 { margin: 13px 0 0; font-family: var(--serif); font-size: clamp(38px, 5vw, 58px); font-weight: 500; line-height: 1.15; }
+    .interest-showcase { display: grid; grid-template-columns: 138px minmax(0, 1fr); align-items: center; gap: 24px; }
+    .interest-photo { margin: 0; }
+    .interest-photo img { height: 228px; object-fit: cover; object-position: 50% 56%; }
     .interest-list { display: flex; flex-wrap: wrap; gap: 12px; }
     .interest-list span { padding: 12px 17px; border: 1px solid #a8bdad80; color: #eef2e7; font-size: 13px; }
     .interest-note { margin: 22px 0 0; color: #c8d4c9; font-size: 13px; }
@@ -190,12 +196,16 @@
       .project-list { grid-template-columns: 1fr; gap: 38px; }
       .project-image img { height: clamp(245px, 70vw, 390px); }
       .about-grid, .interests-grid { grid-template-columns: 1fr; gap: 34px; }
+      .interest-showcase { grid-template-columns: 110px minmax(0, 1fr); gap: 18px; }
+      .interest-photo img { height: 190px; }
       .experience { grid-template-columns: 105px 1fr; gap: 16px; }
       .interests { padding: 64px 0; }
       .contact-grid { grid-template-columns: 1fr; align-items: start; }
     }
     @media (max-width: 420px) {
       .experience { grid-template-columns: 1fr; gap: 7px; }
+      .interest-showcase { grid-template-columns: 78px minmax(0, 1fr); gap: 12px; }
+      .interest-photo img { height: 150px; }
       .project-meta { flex-direction: column; gap: 7px; }
       .project-type { padding-top: 0; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
@@ -235,8 +245,8 @@
           <div class="hero-foot"><span class="availability" aria-hidden="true"></span>Open to thoughtful opportunities</div>
         </div>
         <figure class="hero-art">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Sunlight filtering through a green forest" fetchpriority="high">
-          <figcaption class="image-note">Curiosity, in every direction</figcaption>
+          <img src="assets/images/claire-profile.jpg" alt="Claire Volinski wearing glasses and a backpack outdoors" fetchpriority="high">
+          <figcaption class="image-note">Claire Volinski</figcaption>
         </figure>
       </div>
     </section>
@@ -297,7 +307,7 @@
             </article>
             <article class="experience">
               <time datetime="2023-09">September 2023 – June 2026</time>
-              <div><h3>Debate Team Captain</h3><p class="company">Shawnee High School Debate Team · Shawnee High School</p><ul><li>Created and taught a debate curriculum for 30 novice JV debaters; led the team to fourth place among eight schools, including veteran programs.</li><li>Led the South Jersey Debate League with a 12–2 regular-season record and won the league championship.</li><li>Recognized with Best Team Speaker; built a supportive team culture by staying available to coach and encourage new debaters.</li></ul></div>
+              <div><h3>Debate Team Captain</h3><p class="company">Shawnee High School Debate Team · Shawnee High School</p><ul><li>Created and taught a debate curriculum for 30 novice JV debaters; led the team to fourth place among eight schools, including veteran programs.</li><li>Led the South Jersey Debate League with a 12–2 regular-season record and won the league championship.</li><li>Recognized with Best Team Speaker; built a supportive team culture by staying available to coach and encourage new debaters.</li></ul><figure class="leadership-photo"><img src="assets/images/debate-team.png" alt="The Shawnee High School Debate Team celebrating with its championship trophy" loading="lazy"><figcaption>Shawnee High School Debate Team</figcaption></figure></div>
             </article>
           </div>
         </div>
@@ -308,10 +318,15 @@
       <div class="wrap interests-grid">
         <div><span class="eyebrow">Beyond the desk</span><h2>Curiosity keeps me growing.</h2></div>
         <div>
-          <div class="interest-list" aria-label="Interests">
-            <span>Manufacturing</span><span>Electrical engineering</span><span>Mechanical engineering</span><span>Physics</span><span>Circuitry</span><span>Robotics</span><span>Illustration &amp; design</span>
+          <div class="interest-showcase">
+            <figure class="interest-photo"><img src="assets/images/chicory-flower.jpg" alt="Pale blue flower among green leaves" loading="lazy"></figure>
+            <div>
+              <div class="interest-list" aria-label="Interests">
+                <span>Manufacturing</span><span>Electrical engineering</span><span>Mechanical engineering</span><span>Physics</span><span>Circuitry</span><span>Robotics</span><span>Illustration &amp; design</span>
+              </div>
+              <p class="interest-note">I'm also an artist and cartoonist, and love finding ways to bring illustration and design into my work.</p>
+            </div>
           </div>
-          <p class="interest-note">I'm also an artist and cartoonist, and love finding ways to bring illustration and design into my work.</p>
         </div>
       </div>
     </section>
