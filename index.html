@@ -123,7 +123,7 @@
     .section-heading h2 { margin: 12px 0 0; font-family: var(--serif); font-size: clamp(38px, 5vw, 58px); font-weight: 500; line-height: 1.13; }
     .section-heading p { max-width: 350px; margin: 0 0 5px; color: var(--muted); font-size: 14px; }
     .projects { background: #eff1e9; }
-    .project-list { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .project-list { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 760px; gap: 32px; }
     .project { min-width: 0; }
     .project-image { position: relative; overflow: hidden; background: #dce5d7; }
     .project-image img { height: clamp(250px, 31vw, 390px); object-fit: cover; transition: transform .45s ease; }
@@ -151,9 +151,6 @@
     .interests-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 70px; }
     .interests .eyebrow { color: var(--lime); }
     .interests h2 { margin: 13px 0 0; font-family: var(--serif); font-size: clamp(38px, 5vw, 58px); font-weight: 500; line-height: 1.15; }
-    .interest-showcase { display: grid; grid-template-columns: 138px minmax(0, 1fr); align-items: center; gap: 24px; }
-    .interest-photo { margin: 0; }
-    .interest-photo img { height: 228px; object-fit: cover; object-position: 50% 56%; }
     .interest-list { display: flex; flex-wrap: wrap; gap: 12px; }
     .interest-list span { padding: 12px 17px; border: 1px solid #a8bdad80; color: #eef2e7; font-size: 13px; }
     .interest-note { margin: 22px 0 0; color: #c8d4c9; font-size: 13px; }
@@ -196,16 +193,12 @@
       .project-list { grid-template-columns: 1fr; gap: 38px; }
       .project-image img { height: clamp(245px, 70vw, 390px); }
       .about-grid, .interests-grid { grid-template-columns: 1fr; gap: 34px; }
-      .interest-showcase { grid-template-columns: 110px minmax(0, 1fr); gap: 18px; }
-      .interest-photo img { height: 190px; }
       .experience { grid-template-columns: 105px 1fr; gap: 16px; }
       .interests { padding: 64px 0; }
       .contact-grid { grid-template-columns: 1fr; align-items: start; }
     }
     @media (max-width: 420px) {
       .experience { grid-template-columns: 1fr; gap: 7px; }
-      .interest-showcase { grid-template-columns: 78px minmax(0, 1fr); gap: 12px; }
-      .interest-photo img { height: 150px; }
       .project-meta { flex-direction: column; gap: 7px; }
       .project-type { padding-top: 0; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
@@ -260,28 +253,8 @@
         <div class="project-list">
           <article class="project">
             <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Layered green leaves in soft natural light" loading="lazy">
-              <span class="project-index" aria-label="Project one">01</span>
-            </div>
-            <div class="project-meta">
-              <div><h3>Product metrics dashboard</h3><p>A responsive dashboard for tracking product metrics, with a focus on performance, accessibility, and clear data visualizations.</p></div>
-              <span class="project-type">React · TypeScript · D3</span>
-            </div>
-          </article>
-          <article class="project">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Young plant growing toward the light" loading="lazy">
-              <span class="project-index" aria-label="Project two">02</span>
-            </div>
-            <div class="project-meta">
-              <div><h3>Design System Kit</h3><p>A reusable component library and token system that helps teams build consistent interfaces with accessible patterns.</p></div>
-              <span class="project-type">Storybook · CSS</span>
-            </div>
-          </article>
-          <article class="project">
-            <div class="project-image">
               <img src="https://github.com/user-attachments/assets/5e616d53-06ae-45ac-855b-9e9882aabe54" alt="Prototype storage device created for the FYRE final project" loading="lazy">
-              <span class="project-index" aria-label="Project three">03</span>
+              <span class="project-index" aria-label="Project one">01</span>
             </div>
             <div class="project-meta">
               <div><h3>FYRE Assignments</h3><p>Programming assignments and a group final project from the “Sensing the World” module. The team designed a storage device for rare and historic museum and library artifacts.</p><p><a class="text-link" href="https://github.com/Claire-Volinski/FYRE-Assignments" target="_blank" rel="noopener noreferrer">Explore the project on GitHub <span aria-hidden="true">↗</span></a></p></div>
@@ -318,15 +291,10 @@
       <div class="wrap interests-grid">
         <div><span class="eyebrow">Beyond the desk</span><h2>Curiosity keeps me growing.</h2></div>
         <div>
-          <div class="interest-showcase">
-            <figure class="interest-photo"><img src="assets/images/chicory-flower.jpg" alt="Pale blue flower among green leaves" loading="lazy"></figure>
-            <div>
-              <div class="interest-list" aria-label="Interests">
-                <span>Manufacturing</span><span>Electrical engineering</span><span>Mechanical engineering</span><span>Physics</span><span>Circuitry</span><span>Robotics</span><span>Illustration &amp; design</span>
-              </div>
-              <p class="interest-note">I'm also an artist and cartoonist, and love finding ways to bring illustration and design into my work.</p>
-            </div>
+          <div class="interest-list" aria-label="Interests">
+            <span>Manufacturing</span><span>Electrical engineering</span><span>Mechanical engineering</span><span>Physics</span><span>Circuitry</span><span>Robotics</span><span>Illustration &amp; design</span>
           </div>
+          <p class="interest-note">I'm also an artist and cartoonist, and love finding ways to bring illustration and design into my work.</p>
         </div>
       </div>
     </section>
